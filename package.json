@@ -13,15 +13,17 @@
   "scripts": {
     "release": "auto shipit"
   },
-  "devDependencies": {
-    "auto": "^9.18.0",
-    "auto-config-hipstersmoothie": "^3.0.7",
+  "dependencies": {
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-xo": "^0.29.1",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsdoc": "^22.0.0",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-prettier": "^3.1.2"
+  },
+  "devDependencies": {
+    "auto": "^9.18.0",
+    "auto-config-hipstersmoothie": "^3.0.7",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
