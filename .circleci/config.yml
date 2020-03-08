@@ -1,0 +1,40 @@
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/eslint-config-hipstersmoothie
+  docker:
+    - image: circleci/node:10-browsers
+  environment:
+    TZ: '/usr/share/zoneinfo/America/Los_Angeles'
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: yarn --frozen-lockfile
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/eslint-config-hipstersmoothie
+      - run:
+          name: Release
+          command: git status && yarn auto shipit
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install
+
+      - release:
+          requires:
+            - install
