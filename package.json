@@ -14,6 +14,8 @@
     "release": "auto shipit"
   },
   "devDependencies": {
+    "auto": "^9.18.0",
+    "auto-config-hipstersmoothie": "^3.0.7",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-xo": "^0.29.1",
@@ -35,7 +37,7 @@
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
   },
-  "dependencies": {
-    "auto": "^9.18.0"
+  "auto": {
+    "extends": "hipstersmoothie"
   }
 }

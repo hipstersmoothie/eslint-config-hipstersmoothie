@@ -2,7 +2,9 @@ module.exports = {
   "extends": [
     "airbnb",
     "xo",
-    "prettier"
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
 
   "plugins": ["prettier", "jest", "import", "eslint-plugin-jsdoc"],
